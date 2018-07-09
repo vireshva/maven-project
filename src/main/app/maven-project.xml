@@ -40,6 +40,6 @@ http://www.mulesoft.org/schema/mule/json http://www.mulesoft.org/schema/mule/jso
 	<flow name="logFlights">
 		<jms:inbound-endpoint queue="flights"
 			connector-ref="Active_MQ" doc:name="JMS" />
-		<logger message="#[payload]" level="INFO" doc:name="Logger" />
+		<logger message="records : #[payload]" level="INFO" doc:name="Logger" />
 	</flow>
 </mule>
